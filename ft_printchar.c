@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 22:25:16 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/11/10 02:57:00 by fgoncal2         ###   ########.fr       */
+/*   Created: 2025/11/10 02:24:58 by fgoncal2          #+#    #+#             */
+/*   Updated: 2025/11/10 02:36:27 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-
-
-int	main(void)
+int	ft_printchar(int c)
 {
-	int	my_int = ft_printf(" %% ");
-	printf("\n");
-	int	their_int = printf(" %% ");
-	printf("\n");
-	printf("%d\n", my_int);
-	printf("%d\n", their_int);
-	return (0);
+	ft_putchar_fd(c, 1);
+	return (1);
 }

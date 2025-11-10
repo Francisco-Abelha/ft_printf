@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 22:20:15 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/11/04 22:22:34 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/11/10 02:36:50 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,10 @@
 # include "libft/libft.h"
 
 int	ft_printf(const char *, ...);
+
+
+//utils
+int	ft_printstr(char *str);
+int	ft_printchar(int c);
 
 #endif
