@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 22:25:16 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/11/10 21:13:04 by fgoncal2         ###   ########.fr       */
+/*   Created: 2025/11/10 20:55:35 by fgoncal2          #+#    #+#             */
+/*   Updated: 2025/11/10 21:24:02 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	main(void)
+static int	ft_ptr_len(uintptr_t num)
 {
-	char *num = "fsdf";
-	void	*ptr = &num;
-	int myint = ft_printf(" %p ", ptr);
-	printf("\n");
-	int theirint = printf(" %p ", ptr);
-	printf("\n");
+	int	len;
 
-	printf("%d\n", myint);
-	printf("%d\n", theirint);
+	len = 0;
+	while (num != 0)
+	{
+		len++;
+		num = num / 16;
+	}
+	return (len);
+}
 
-	return (0);
+int	ft_printptr(unsigned long long num)
+{
+	int	len;
+
+	len = 0;
+	len += write(1, "0x", 2);
+	if (num == 0)
+		len += write(1, "0", 1);
+	else
+		len += ft_ptr_len(num);
+	return (len);
 }

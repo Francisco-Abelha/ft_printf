@@ -6,7 +6,7 @@ AR				=	ar
 ARFLAGS 		=	rcs
 RM				=	rm -rf
 
-SRCS			=	ft_printf.c ft_printchar.c ft_printstr.c
+SRCS			=	ft_printf.c ft_printchar.c ft_printstr.c ft_printnum.c ft_printunsigned.c ft_printhex.c ft_printptr.c
 
 OBJS			=	$(SRCS:.c=.o)
 
