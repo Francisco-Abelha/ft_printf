@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printnum.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 18:18:19 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/11/10 18:56:42 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:15:32 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,11 @@ static size_t	num_len(unsigned int n)
 int	ft_printnum(int num)
 {
 	int		len;
-	char	*str;
 
 	if (num < 0)
 		len = num_len(-num) + 1;
 	else
 		len = num_len(num);
-	str = ft_itoa(num);
-	ft_putstr_fd(str, 1);
-	free(str);
+	ft_putnbr_fd(num, 1);
 	return (len);
 }
